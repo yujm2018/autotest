@@ -26,6 +26,7 @@ class Apistep(models.Model):
     REQUEST_METHOD = (('get','get'),('post','post'),('put','put'),('delete','delete'),('patch','patch'))
     apimethod = models.CharField(verbose_name="请求方法",choices=REQUEST_METHOD,default='get',max_length=200,null=True) #方法
     apiresult = models.CharField('预期结果',max_length=200) #预期结果
+    apiresponse = models.CharField('响应数据', max_length=5000, null=True)  # 响应数据
     apistatus = models.BooleanField('是否通过') #测试结果
     create_time = models.DateTimeField('创建时间',auto_now=True) #创建时间，自动获取当前时间
     def __str__(self):
