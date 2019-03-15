@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>产品自动化测试管理平台</title>
 </head>
+
 <body role="document">
 <!--导航栏-->
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -33,23 +34,22 @@
                 <th>ID</th><th>产品</th><th>单一接口用例名称</th><th>URL地址</th><th>参数值</th><th>方法</th><th>预期结果</th><th>测试结果</th>
             </tr>
             </thead>
-
             <tbody>
                 {% for apis in apiss %}
                 <tr>
-                <td>{{apis.id}}</td>
-                <td>{{ apis.Product.productname }}</td>
-                <td>{{ apis.apiname }}</td>
-                <td>{{ apis.apiurl }}</td>
-                <td>{{ apis.apiparamvalue }}</td>
-                <td>{{ apis.apimethod }}</td>
-                <td>{{ apis.apiresult }}</td>
-                <td>{% if apis.apistatus == 1 %}
-                <a style='color:green'>{{ apis.apistatus }}</a>
-                {% else %}
-                <a style='color:red'>{{ apis.apistatus }}</a>
-                {% endif %}
-                </td>
+                    <td>{{apis.id}}</td>
+                    <td>{{ apis.Product.productname }}</td>
+                    <td>{{ apis.apiname }}</td>
+                    <td>{{ apis.apiurl }}</td>
+                    <td>{{ apis.apiparamvalue }}</td>
+                    <td>{{ apis.apimethod }}</td>
+                    <td>{{ apis.apiresult }}</td>
+                    <td>{% if apis.apistatus == 1 %}
+                    <a style='color:green'>{{ apis.apistatus }}</a>
+                    {% else %}
+                    <a style='color:red'>{{ apis.apistatus }}</a>
+                    {% endif %}
+                    </td>
                 </tr>
                 {% endfor %}
                 </tbody>
