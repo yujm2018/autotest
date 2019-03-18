@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'apitest.apps.ApitestConfig',
     'product.apps.ProductConfig',
     'bug.apps.BugConfig',
+    'apptest',
     'set',
     'bootstrap4',
 ]
