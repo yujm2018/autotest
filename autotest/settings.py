@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bug.apps.BugConfig',
     'apptest',
     'set',
+    'webtest',
     'bootstrap4',
 ]
 
